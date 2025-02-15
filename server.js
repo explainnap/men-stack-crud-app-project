@@ -9,6 +9,23 @@ const methodOverride = require("method-override");
 
 const PORT = process.env.PORT || 3000;
 
+const MongoStore = require('connect-mongo');
+
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGODB_URI,
+            collectionName: 'sessions',
+        }),
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24,
+        },
+    })
+);
+
 mongoose.connect(process.env.MONGODB_URI)
 
 mongoose.connection.on('connected', () => {
