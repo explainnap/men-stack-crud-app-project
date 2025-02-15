@@ -1,5 +1,6 @@
 
 
+<img width="400" alt="Screenshot 2025-02-15 at 10 29 26" src="https://github.com/user-attachments/assets/ca2d28cd-09c8-4c0d-9692-2e6144db46e8" />
 
 
 # StampBook
