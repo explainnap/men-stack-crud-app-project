@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stampbook</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Stampbook</a>
+    <a href="/users/<%= user._id %>/stamps/new">Add stamp to album</a>
+    <a href="/auth/signout">Sign out</a>
+  </nav>
+
+  <h1>Welcome, <%= user.username %>! to your stampbook</h1>
+
+  <h2>List of stamps in the album</h2>
+
+  <% if (user.album.length > 0) { %>
+    <ul>
+      <% user.album.forEach(stamp => { %>
+        <li><a href="/users/<%= user._id %>/stamps/<%= stamp._id %>"><%= stamp.name %> - <%= stamp.quantity %></a></li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No stamps in the album</p>
+  <% } %>
+  
+  <a href="/users/<%= user._id %>/stamps/new">Add stamp to album</a>
+</body>
+</html>

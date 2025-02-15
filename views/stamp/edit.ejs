@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit stamp</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">stampbook</a>
+    <a href="/auth/signout">Sign out</a>
+  </nav>
+
+  <h1>Edit stamp</h1>
+
+  <form action="/users/<%= userId %>/stamps/<%= stamp._id %>?_method=PUT" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="<%= stamp.name %>" required>
+
+
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" value="<%= stamp.quantity %>" required>
+
+    <button type="submit">Edit stamp</button>
+  </form>
+
+  
+</body>
+</html>

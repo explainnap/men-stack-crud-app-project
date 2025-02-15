@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stamp Details</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">stampbook</a>
+    <a href="/auth/signout">Sign out</a>
+  </nav>
+
+  <h1>stamp Details</h1>
+
+  <p>Name: <%= stamp.name %></p>
+  <p>Quantity: <%= stamp.quantity %></p>
+
+  <a href="/users/<%= userId %>/stamps/<%= stamp._id %>/edit">Edit stamp</a>
+
+  <form action="/users/<%= userId %>/stamps/<%= stamp._id %>?_method=DELETE" method="post">
+    <button type="submit">Delete stamp</button>
+  </form>
+  <a href="/users/<%= userId %>">Back to album</a>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stampbook - Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <% if (user) { %>
+      <a href="/users/<%= user.id %>">My Collection</a>
+      <a href="/users/<%= user.id %>/stamps/new">Add stamp to album</a>
+      <a href="/auth/signout">Sign out</a>
+      <% } %> <% if (!user) { %>
+      <a href="/auth/signin">Sign In</a>
+      <a href="/auth/signup">Sign Up</a>
+      <% } %>
+    </nav>
+
+    <header>
+      <h1>Welcome, <%= user ? user.username : 'Guest' %> to Stampbook</h1>
+    </header>
+
+    <section id="introduction">
+      <h2>Manage Your Stamp Collection Like Never Before</h2>
+      <p>
+        Discover the power of Stampbook, your ultimate stamp inventory
+        management solution that simplifies the way you collect, organize, and
+        display your stamps. Whether you're a seasoned philatelist or just
+        starting out, Stampbook provides you with the tools you need to take
+        control of your collection.
+      </p>
+    </section>
+
+    <section id="features" class="features-container">
+      <img
+        src="https://images.pexels.com/photos/248993/pexels-photo-248993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Key Features Illustration"
+        class="features-image"
+      />
+      <div>
+        <h3>Key Features:</h3>
+        <ul>
+          <li>Easy-to-use interface to add, edit, and manage your stamps</li>
+          <li>
+            Detailed records with images, descriptions, and purchase history
+          </li>
+          <li>
+            Advanced search options to find stamps by country, year, or theme
+          </li>
+          <li>
+            Interactive reports and analytics to understand the value and growth
+            of your collection
+          </li>
+          <li>
+            Secure cloud storage to ensure your data is safe and accessible
+            anywhere
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <% if (!user) { %>
+    <section id="authentication">
+      <h4>Please sign in to add stamps to your collection.</h4>
+      <p>
+        <a href="/auth/signin">Sign In</a> &nbsp;Or&nbsp;
+        <a href="/auth/signup">Sign Up</a>
+      </p>
+    </section>
+    <% } %>
+  </body>
+</html>
