@@ -23,8 +23,6 @@ To get started with StampBook, visit [StampBook Live](#) to create your account 
 - **EJS:** Templating engine used to generate HTML markup with plain JavaScript.
 - **CSS:** For styling.
 
-## Screenshots
-![Screenshot of StampBook Main Interface](/path/to/screenshot) *Include a path or link to your app screenshot here.*
 
 ## How to Contribute
 To contribute to StampBook, please fork the repository and submit a pull request. You can also open issues for bugs or feature requests.
