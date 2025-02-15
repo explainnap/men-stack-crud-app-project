@@ -1,5 +1,5 @@
 
-<img width="500" alt="Screenshot 2025-02-15 at 10 29 26" src="https://git.generalassemb.ly/sebharmsworth/stampbook/assets/54089/ed6a3a4b-490b-437a-b677-d145e002987e">
+
 
 
 # StampBook
