@@ -14,7 +14,7 @@ StampBook is a web application designed to create and manage digital stamp colle
 - **Responsive Design:** Accessible on desktop and mobile devices.
 
 ## Getting Started
-To get started with StampBook, visit [StampBook Live](#) to create your account and begin adding to your collection.
+To get started with StampBook, visit [StampBook Live](https://men-stack-crud-app-project-seven.vercel.app/) to create your account and begin adding to your collection.
 
 ## Technologies Used
 - **Node.js:** Server-side JavaScript runtime.
